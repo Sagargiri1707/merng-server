@@ -1,0 +1,25 @@
+{
+  "name": "merng-stack",
+  "version": "1.0.0",
+  "description": "Social media app",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run serve\" \"cd client && npm start\" ",
+    "serve": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
