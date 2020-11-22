@@ -4,7 +4,7 @@
   "description": "Social media app",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run serve\" \"cd client && npm start\" ",
+    "start": "npm run serve",
     "serve": "node index.js"
   },
   "author": "",
