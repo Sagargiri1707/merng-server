@@ -1,27 +1,30 @@
-const { model, Schema } = require('mongoose')
+const { model, Schema } = require("mongoose");
 
-const postSchema = new Schema({
+const postSchema = new Schema(
+  {
     username: String,
     body: String,
-    comments: [{
+    comments: [
+      {
         body: String,
         username: String,
-        createdAt:String
-    }],
-    likes: [{
+        createdAt: String,
+      },
+    ],
+    likes: [
+      {
         username: String,
         createdAt: String,
-        
-    }],
+      },
+    ],
     user: {
-        type: Schema.Types.ObjectId,
-        ref:"users"
+      type: Schema.Types.ObjectId,
+      ref: "users",
     },
-    createdAt: {
-        type:String,
-        default:new Date().toISOString()
-    }
-}
-)
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports=model('Post',postSchema)
+module.exports = model("Post", postSchema);
